@@ -1,4 +1,4 @@
-# Joke of the Day
+# DB project
 
 # Installation
 
@@ -40,8 +40,7 @@ The available properties are:
 
 ### Database
 
-The site uses **MariaDB** database. Click [here](https://mariadb.com/kb/en/mariadb/getting-installing-and-upgrading-mariadb/) for how to install it.
-In my.ini or my.cnf under [mysqld] add: character-set-server=utf8
+The site uses postgresql.
 
 * **db.url** - the database url
 * **db.username** - the database username
