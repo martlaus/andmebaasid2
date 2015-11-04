@@ -1,9 +1,9 @@
 package andmebaasid2.guice.provider;
 
+import andmebaasid2.utils.ConfigurationProperties;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import andmebaasid2.utils.ConfigurationProperties;
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,11 +51,11 @@ public class EntityManagerFactoryProvider implements Provider<EntityManagerFacto
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 
         properties.put("hibernate.show_sql", "true");
-        properties.put("hibernate.hbm2ddl.auto", "create");
+        properties.put("hibernate.hbm2ddl.auto", "update");
 
-        properties.put("hibernate.c3p0.min_size", "5");
+        properties.put("hibernate.c3p0.min_size", "1");
         properties.put("hibernate.c3p0.max_size", "100");
-        properties.put("hibernate.c3p0.initialpoolsize", "5");
+        properties.put("hibernate.c3p0.initialpoolsize", "1");
         properties.put("hibernate.c3p0.acquire_increment", "1");
         properties.put("hibernate.c3p0.timeout", "300");
         properties.put("hibernate.c3p0.max_statements", "50");

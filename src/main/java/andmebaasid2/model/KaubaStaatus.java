@@ -2,17 +2,17 @@ package andmebaasid2.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by mart on 4.11.15.
  */
 @Entity(name = "kauba_staatus" )
+@Table(name = "kauba_staatus")
 public class KaubaStaatus {
 
     @Id
-    @GeneratedValue
     private int kauba_staatuse_kood;
 
     @Column

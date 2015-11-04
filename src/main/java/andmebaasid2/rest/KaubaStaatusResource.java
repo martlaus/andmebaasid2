@@ -23,6 +23,8 @@ public class KaubaStaatusResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<KaubaStaatus> getAllStatuses() {
+
+
         return kaubaStaatusDAO.findAll();
     }
 }
