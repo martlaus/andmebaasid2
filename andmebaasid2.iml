@@ -5,11 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
-        <datasource-mapping>
-          <factory-entry name="andmebaasid2" value="9c97d77e-e063-41d7-9247-e7960a6bbea8" />
-          <factory-entry name="jotd" />
-          <factory-entry name="vorgurakendused22" />
-        </datasource-mapping>
+        <datasource-mapping />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>

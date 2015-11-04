@@ -111,7 +111,7 @@ CREATE TABLE "garaazh"."riik"
 CONSTRAINT "PK_riik" PRIMARY KEY ("riigi_kood"),
 CONSTRAINT "UK_riik_on_unikaalne" UNIQUE ("nimi"),
 CONSTRAINT "CHK_riigi_nimi_ei_ole_tyhi" CHECK (nimi !~ '^\s*$'),
-CONSTRAINT "CHK_riigi_kood_on_2_tahte" CHECK (nimi ~ '^[A-Z]{2}$')
+CONSTRAINT "CHK_riigi_kood_on_2_tahte" CHECK (riigi_kood ~ '^[A-Z]{2}$')
 )
 ;
 
@@ -152,7 +152,7 @@ CREATE TABLE "garaazh"."kaup"
 "pildi_aadress" varchar(255)	 NULL,
 CONSTRAINT "PK_kaup" PRIMARY KEY ("kauba_kood"),
 CONSTRAINT "UK_nimetus_on_unikaalne2" UNIQUE ("nimetus"),
-CONSTRAINT "CHK_kauba_kood" CHECK (kauba_kood ~ '^\d+^$'),
+CONSTRAINT "CHK_kauba_kood" CHECK (kauba_kood ~ '^\d+$'),
 CONSTRAINT "CHK_kauba_nimetus_ei_ole_tyhi" CHECK (nimetus !~ '^\s*$'),
 CONSTRAINT "CHK_kauba_hind_pole_negatiivne" CHECK (hind >= 0),
 CONSTRAINT "CHK_kauba_mootmed_on_positiivsed" CHECK (korgus > 0 AND pikkus > 0 AND laius > 0),
