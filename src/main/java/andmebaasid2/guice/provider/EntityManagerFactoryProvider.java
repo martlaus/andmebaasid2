@@ -51,7 +51,7 @@ public class EntityManagerFactoryProvider implements Provider<EntityManagerFacto
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 
         properties.put("hibernate.show_sql", "true");
-        //properties.put("hibernate.hbm2ddl.auto", "update"); //las ta olla siin väljakommenteeritud, et hoida meeles mu valu selle sitaga
+        //properties.put("hibernate.hbm2ddl.auto", "update"); //(def validate) 4las ta olla siin väljakommenteeritud, et hoida meeles mu valu selle sitaga
 
         properties.put("hibernate.c3p0.min_size", "1");
         properties.put("hibernate.c3p0.max_size", "100");
