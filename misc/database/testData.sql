@@ -19,9 +19,11 @@ INSERT INTO garaazh.kauba_kategooria(kauba_kategooria_kood, ylem_kategooria, nim
 
 #Kauba staatus
 
-INSERT INTO garaazh.kauba_staatus(kauba_staatuse_kood, nimetus, kirjeldus) VALUES (1, 'aktiivne', 'Lenovo IdeaPad sülearvuti Intel i3 protsessoriga.');
+INSERT INTO garaazh.kauba_staatus(kauba_staatuse_kood, nimetus, kirjeldus) VALUES (1, 'aktiivne', 'Kaup on aktiivne.');
 
-INSERT INTO garaazh.kauba_staatus(kauba_staatuse_kood, nimetus, kirjeldus) VALUES (2, 'mitteaktiivne', 'Playstation 3 mängukonsool.');
+INSERT INTO garaazh.kauba_staatus(kauba_staatuse_kood, nimetus, kirjeldus) VALUES (2, 'mitteaktiivne', 'Kaup on mitteaktiivne');
+
+INSERT INTO garaazh.kauba_staatus(kauba_staatuse_kood, nimetus, kirjeldus) VALUES (3, 'kustutatud', 'Kaup on kustutatud, soft delete.');
 
 
 #Töötaja roll
