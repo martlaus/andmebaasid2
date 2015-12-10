@@ -29,3 +29,33 @@ CREATE VIEW garaazh.ylemkategooriad WITH (security_barrier) AS
   WHERE kategooria.ylem_kategooria IS NULL;
 
 COMMENT ON VIEW garaazh.ylemkategooriad IS 'Selles tabelis on kõikide kaubaliikide ülemkategooriad';
+
+
+CREATE VIEW aktiivne_tootaja WITH (security_barrier) AS
+  SELECT tootaja.tootaja_kood AS tootaja_kood,
+         tootaja.isikukood AS isikukood,
+         tootaja.tootaja_rolli_kood AS tootaja_rolli_kood,
+         tootaja.tootaja_staatuse_kood AS tootaja_staatuse_kood,
+         tootaja.e_mail AS e_mail,
+         tootaja.eesnimi AS eesnimi,
+         tootaja.perenimi AS perenimi
+  FROM garaazh.tootaja AS tootaja
+  WHERE tootaja_staatuse_kood = 1;
+
+COMMENT ON VIEW aktiivne_tootaja IS 'Aktiivse töötaja vaatamine';
+
+CREATE VIEW tootaja_roll WITH (security_barrier) AS
+  SELECT tootaja.tootaja_kood AS tootaja_kood,
+         tootaja.isikukood AS isikukood,
+         tootaja.tootaja_rolli_kood AS tootaja_rolli_kood,
+         tootaja.tootaja_staatuse_kood AS tootaja_staatuse_kood,
+         tootaja.e_mail AS e_mail,
+         tootaja.eesnimi AS eesnimi,
+         tootaja.perenimi AS perenimi
+  FROM garaazh.tootaja AS tootaja
+  WHERE tootaja_rolli_kood = 1;
+
+COMMENT ON VIEW tootaja_roll IS 'Kaupade haldajate vaatamine';
+
+
+
